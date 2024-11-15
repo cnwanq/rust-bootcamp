@@ -1,22 +1,8 @@
-# RUST BOOTCAMP - Rust 训练营
-
-## 简介
-
-这是一个 Rust 训练营的项目，旨在帮助初学者掌握 Rust 编程语言的基础知识和实践。
-
-## 目标
-
-- 了解 Rust 编程语言的基本概念和语法。
-- 掌握 Rust 的基本数据类型和控制流。
-- 编写简单的 Rust 程序。
-- 解决常见的 Rust 编程问题。
-- 学习 Rust 的标准库和常用的第三方库。
+# Geektime Rust 语言训练营
 
 ## 环境设置
 
-### 安装 rust
-
-请按照 [Rust 官方文档](https://www.rust-lang.org/zh-CN/tools/install) 的说明安装 Rust。
+### 安装 Rust
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -40,11 +26,29 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - vscode-icons: 图标优化
 - YAML: YAML 文件支持
 
+### 安装 cargo generate
+
+cargo generate 是一个用于生成项目模板的工具。它可以使用已有的 github repo 作为模版生成新的项目。
+
+```bash
+cargo install cargo-generate
+```
+
+在我们的课程中，新的项目会使用 `tyr-rust-bootcamp/template` 模版生成基本的代码：
+
+```bash
+cargo generate tyr-rust-bootcamp/template
+```
+
 ### 安装 pre-commit
 
 pre-commit 是一个代码检查工具，可以在提交代码前进行代码检查。
 
-> 安装成功后运行 `pre-commit install` 安装 pre-commit 钩子。
+```bash
+pipx install pre-commit
+```
+
+安装成功后运行 `pre-commit install` 即可。
 
 ### 安装 Cargo deny
 
@@ -71,6 +75,8 @@ cargo install git-cliff
 ```
 
 ### 安装 cargo nextest
+
+cargo nextest 是一个 Rust 增强测试工具。
 
 ```bash
 cargo install cargo-nextest --locked
